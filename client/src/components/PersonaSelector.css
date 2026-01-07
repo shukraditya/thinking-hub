@@ -1,0 +1,100 @@
+.persona-selector {
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 3rem 2rem;
+  box-shadow: none;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.persona-title {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.persona-subtitle {
+  text-align: center;
+  color: #666666;
+  margin-bottom: 3rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.persona-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 0;
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 200px;
+}
+
+.persona-card:hover {
+  border-color: #000000;
+  background: #fafafa;
+}
+
+.persona-card:active {
+  background: #000000;
+  border-color: #000000;
+}
+
+.persona-card:active .persona-name,
+.persona-card:active .persona-description {
+  color: #ffffff;
+}
+
+.persona-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.persona-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.persona-description {
+  font-size: 0.8125rem;
+  color: #666666;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .persona-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .persona-selector {
+    padding: 1.5rem;
+  }
+}
+

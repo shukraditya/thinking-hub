@@ -1,0 +1,26 @@
+{
+  "name": "thinking-buddy",
+  "version": "1.0.0",
+  "description": "A guided learning app that promotes creativity and discovery from first principles",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "keywords": ["learning", "education", "guided-learning", "gemini"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "@google/generative-ai": "^0.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2"
+  }
+}
+

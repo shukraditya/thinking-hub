@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 import './ChatInterface.css';
 
 function ChatInterface({ persona, conversationHistory, setConversationHistory, onNewChat }) {
@@ -92,7 +93,11 @@ function ChatInterface({ persona, conversationHistory, setConversationHistory, o
               className={`message ${msg.role === 'user' ? 'user-message' : 'assistant-message'}`}
             >
               <div className="message-content">
-                {msg.content}
+                {msg.role === 'assistant' ? (
+                  <ReactMarkdown>{msg.content}</ReactMarkdown>
+                ) : (
+                  msg.content
+                )}
               </div>
             </div>
           ))
